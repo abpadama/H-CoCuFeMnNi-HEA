@@ -9,8 +9,8 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 
 #load data
-dataset1 = pd.read_csv('data_top_elements.csv') # change file name
-dataset2 = pd.read_csv('combinations_top_combinations.csv') # change file name
+dataset1 = pd.read_csv('data_top_element.csv') # change file name
+dataset2 = pd.read_csv('combinations_co_top') # change file name
 
 # x and y
 X = dataset1.drop(['E_ads',], axis=1).values
