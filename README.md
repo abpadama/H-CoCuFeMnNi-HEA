@@ -1,6 +1,6 @@
 # H-CoCuFeMnNi HEA systems
 
-includes data on H  of the paper 
+includes data and code on H-CoCuFeMnNi HEA systems of the paper 
 
 ### Machine learning and density functional theory-based analysis of the surface reactivity of high entropy alloys: The case of H atom adsorption on CoCuFeMnNi
 Allan Abraham B. Padama, Marianne A. Palmero, Koji Shimizu, Tongjai Chookajorn, and Satoshi Watanabe
