@@ -21,7 +21,6 @@ X_train, X_test, y_train, y_test = train_test_split(X, y,train_size=0.80, random
 
 gpr = GaussianProcessRegressor(random_state=0)
 
-
 # Define hyperparameter values for tuning
 constant_values = np.linspace(10, 300, 15)  # Bound values for constant kernel
 length_scales = np.linspace(40, 300, 15)    # Bound values for RBF kernel length scale
@@ -84,7 +83,7 @@ plt.scatter(y_test,y_test_pred,s=15, color='red', label='Test')
 # Calculate the slope of the line (change in y / change in x)
 slope = (y_test[-1] - y_test[0]) / (y_test[-1] - y_test[0])
 # Extend the lines by creating new x-values
-x_extended = np.linspace(-2.1, -0.1, 100)  # Generate 100 new x-values from -1 to 1
+x_extended = np.linspace(-2.5, -2.5, 100)  # Generate 100 new x-values from -1 to 1
 # Calculate corresponding y-values for the extended line using the slope
 y_extended = slope * (x_extended - y_test[0]) + y_test[0]
 
@@ -97,8 +96,8 @@ plt.plot(x_extended, y_offset_pos, color='cyan',  linestyle='--')
 plt.plot(x_extended, y_offset_neg, color='cyan',  linestyle='--')
 plt.xlabel('${\Delta}$E$_{DFT}$' + '  ' + '(eV)')
 plt.ylabel('${\Delta}$E$_{pred}$' + '  ' + '(eV)')
-plt.xlim(-2.1, -0.1) # change range
-plt.ylim(-2.1, -0.1) # change range
+plt.xlim(dataset_pred['E_ads'].min(), dataset_pred['E_ads'].max())
+plt.ylim(dataset_pred['E_ads_pred'].min(), dataset_pred['E_ads_pred'].max())
 plt.legend()
 plt.rcParams['figure.dpi']=300
 plt.savefig('gpr-fcc-element.jpg')
