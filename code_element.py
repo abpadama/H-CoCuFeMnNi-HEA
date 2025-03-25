@@ -9,8 +9,8 @@ from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
 import matplotlib.pyplot as plt
 
 #load data
-dataset1 = pd.read_csv('data_top_element.csv') # change file name
-dataset2 = pd.read_csv('combinations_co_top') # change file name
+dataset1 = pd.read_csv('data_h_fcc_element.csv') # change file name
+dataset2 = pd.read_csv('combinations_h_fcc.csv') # change file name
 
 # x and y
 X = dataset1.drop(['E_ads',], axis=1).values
@@ -58,7 +58,7 @@ y_pred_dataset = gpr_search.best_estimator_.predict(dataset1.drop(['E_ads',], ax
 dataset_pred = dataset1
 dataset_pred['E_ads_pred'] = y_pred_dataset
 
-dataset_pred.to_csv('dataset-top-element.csv') # change file name
+dataset_pred.to_csv('dataset-fcc-element.csv') # change file name
 
 mae_train = mean_absolute_error(y_train, y_train_pred)
 mae_test = mean_absolute_error(y_test, y_test_pred)
@@ -101,7 +101,7 @@ plt.xlim(-2.1, -0.1) # change range
 plt.ylim(-2.1, -0.1) # change range
 plt.legend()
 plt.rcParams['figure.dpi']=300
-plt.savefig('gpr-top-element.jpg')
+plt.savefig('gpr-fcc-element.jpg')
 
 #predict remaining/other sites
 X_all = dataset2.values
@@ -112,4 +112,4 @@ print(y_pred_all)
 dataset2['E_ads'] = y_pred_all
 print(dataset2)
 
-dataset2.to_csv('complete-top-element.csv') # change file name
+dataset2.to_csv('complete-fcc-element.csv') # change file name
