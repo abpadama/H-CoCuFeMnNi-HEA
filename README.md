@@ -54,13 +54,13 @@ You can download the data used in this study by cloning the git repository:
 ## Machine Learning
 >**Model**: Gaussian Process Regression
 >
->**Features**: count of atom per element per region (see __**data_h_[site]_element.csv**__)
+>**Features**: count of atom per element per region (see _**data_h_[site]_element.csv**_)
 >
 >**Target output**: adsorption energy ($E_{ads}$)
 >
->**Hyperparameter tuning**: Grid Search (see __**code_element.py**__)
+>**Hyperparameter tuning**: Grid Search (see _**code_element.py**_)
 >
->**Prediction**: all possible combinations of microstructures (see __**combinations_h_[site].csv**__)
+>**Prediction**: all possible combinations of microstructures (see _**combinations_h_[site].csv**_)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
