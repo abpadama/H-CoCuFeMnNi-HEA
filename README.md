@@ -40,7 +40,7 @@ You can download the data used in this study by cloning the git repository:
 >
 > **Force Convergence Threshold**: 0.02 eV/Å
 >
-> **V Slab Model**:  3x3x4 supercell of (111) facet, with 14 Å vacuum layer
+> **Slab Model**:  3x3x4 supercell of (111) facet, with 14 Å vacuum layer
 >
 > **Functional:**: BEEF-vdW
 >
